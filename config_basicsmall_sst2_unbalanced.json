@@ -1,0 +1,22 @@
+[DEFAULT]
+lr = 1e-4
+batch_size = 8
+checkpoint = None
+directory = sst2basic_custom_unbalanced
+seed = 42
+epochs = 5
+accuracy_wf = 1
+fairness_wf = 0.1
+robustness_wf = 1
+time_wf = 1
+wished_robustness = 0.95
+wished_accuracy = 0.85
+wished_time = 0.002
+Big_C = 100
+search_metric = basic
+num_cpu = 4
+num_gpu = 1
+models = default
+classifier = default
+max_trials = 50
+dataset = sst2smallunbalanced

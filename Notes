@@ -1,0 +1,25 @@
+Notes:
+
+One training run with current config takes about 4 days.
+with metric just as accuracy bert base uncased performs best with nn classifier, but more hidden dimensions(maybe more prone to overfitting). 0.9243119266055045
+best config {'classifier_type▁choice': 0, 'hidden_fc': 200, 'lr': 2.1604111300743763e-06, 'model_name▁choice': 0}
+with custom metric accuracy * accuracy_wf + 1/time_per_prediciton * time_wf + robustness * robustness_wf:
+where robustness = robustness1 + robustness2
+robustness1 = robustness against dropout in embedding layer
+robustness2 = robustness against noise in training data in the form of random letter flips
+here bert base uncased with nn classifier also performed best with score: 0.9917551188618552
+best config {'classifier_type▁choice': 0, 'hidden_fc': 102, 'lr': 5e-06, 'model_name▁choice': 0}
+current wfs:
+accuracy_wf = 1
+fairness_wf = 0.1
+robustness_wf = 0.1
+time_wf = 0.0001
+
+--> Kinda boring result try different weight factors. 
+TODO:
+different weight factors
+Need better/different evaluation methods for training and testing
+Convergence always happens within 2 epochs so reduce training time by reducing training epochs
+gpt2 does not seem to do anything accuracy at 0.5 most likely some implementation error
+
+
