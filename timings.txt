@@ -1,5 +1,0 @@
-Bert: 'time_per_prediciton': 0.001361996482271667
-BAG:'time_per_prediciton': 0.0019815618838738957
-GPT2:'time_per_prediciton': 0.009526234427723317
-distilbert: 'time_per_prediciton': 0.0006927733027606929
-electra: 'time_per_prediciton': 0.001546112769240633
